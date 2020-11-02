@@ -1,0 +1,14 @@
+﻿<ribbon:RibbonTab x:Class="ModuleA.RibbonTabs.ViewATab"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
+                      Header="View A Tab" Background="Gold" 
+                      x:Name="xx"
+                      >
+
+    <ribbon:RibbonGroup Header="My Actions" Background="LightBlue" Width="100">
+        <ribbon:RibbonButton Label="Update View A" Command="{Binding UpdateCommand}" Background="LightGray" BorderBrush="Black"/>
+        <Button Content="Navigate ViewB" Command="{Binding NavigateCommand}" CommandParameter="ViewB" />
+    </ribbon:RibbonGroup>
+
+</ribbon:RibbonTab>

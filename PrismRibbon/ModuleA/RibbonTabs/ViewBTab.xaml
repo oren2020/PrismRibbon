@@ -1,0 +1,12 @@
+﻿<ribbon:RibbonTab x:Class="ModuleA.RibbonTabs.ViewBTab"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:ribbon="clr-namespace:System.Windows.Controls.Ribbon;assembly=System.Windows.Controls.Ribbon"
+                      Header="View B Tab"
+                      >
+    
+    <ribbon:RibbonGroup Header="My Actions"  Width="100">
+        <ribbon:RibbonButton Label="Update View B" Command="{Binding UpdateCommand}" Background="LightGray" BorderBrush="Black"/>
+    </ribbon:RibbonGroup>
+
+</ribbon:RibbonTab>
