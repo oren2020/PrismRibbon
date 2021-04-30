@@ -120,3 +120,81 @@ C:\Users\froon\source\repos\PrismRibbon_Projects\PrismRibbon_2\Content\obj\Debug
 C:\Users\froon\source\repos\PrismRibbon_Projects\PrismRibbon_2\Content\obj\Debug\Content.dll
 C:\Users\froon\source\repos\PrismRibbon_Projects\PrismRibbon_2\Content\obj\Debug\Content.pdb
 C:\Users\froon\source\repos\PrismRibbon_Projects\PrismRibbon_2\Content\obj\Debug\Content.csproj.CoreCompileInputs.cache
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Content.dll.config
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Content.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Content.pdb
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\CommonServiceLocator.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Infrastructure.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Unity.Wpf.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Wpf.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.ValueTuple.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Unity.Abstractions.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Unity.Container.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Infrastructure.pdb
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Infrastructure.dll.config
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.pdb
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.xml
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Unity.Wpf.pdb
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Unity.Wpf.xml
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Wpf.pdb
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Wpf.xml
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.ValueTuple.xml
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Unity.Abstractions.pdb
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Unity.Container.pdb
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.csprojAssemblyReference.cache
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Views\ContentView.baml
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Views\ContentView.g.cs
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content_MarkupCompile.cache
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.g.resources
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.Properties.Resources.resources
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.csproj.GenerateResource.cache
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.csproj.CoreCompileInputs.cache
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.csproj.CopyComplete
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.dll
+C:\Users\froon\Documents\vsproject\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.pdb
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Content.dll.config
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Content.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Content.pdb
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\CommonServiceLocator.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Infrastructure.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Unity.Wpf.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Wpf.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.ValueTuple.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Unity.Abstractions.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Unity.Container.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Infrastructure.pdb
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Infrastructure.dll.config
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.pdb
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.xml
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Unity.Wpf.pdb
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Unity.Wpf.xml
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Wpf.pdb
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Prism.Wpf.xml
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\System.ValueTuple.xml
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Unity.Abstractions.pdb
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\bin\Debug\Unity.Container.pdb
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.csprojAssemblyReference.cache
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Views\ContentView.baml
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Views\ContentView.g.cs
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content_MarkupCompile.cache
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.g.resources
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.Properties.Resources.resources
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.csproj.GenerateResource.cache
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.csproj.CoreCompileInputs.cache
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.csproj.CopyComplete
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.dll
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\Content\obj\Debug\Content.pdb

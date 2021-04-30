@@ -10,7 +10,7 @@
 //------------------------------------------------------------------------------
 
 using Prism.Interactivity;
-using Prism.Interactivity.InteractionRequest;
+using Prism.Ioc;
 using Prism.Mvvm;
 using Prism.Regions;
 using Prism.Regions.Behaviors;

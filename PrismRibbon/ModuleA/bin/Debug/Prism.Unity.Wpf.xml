@@ -4,121 +4,39 @@
         <name>Prism.Unity.Wpf</name>
     </assembly>
     <members>
-        <member name="T:Prism.Unity.UnityBootstrapper">
+        <member name="T:Prism.Unity.PrismApplication">
             <summary>
-            Base class that provides a basic bootstrapping sequence that
-            registers most of the Prism Library assets
-            in a <see cref="T:Unity.IUnityContainer"/>.
-            </summary>
-            <remarks>
-            This class must be overridden to provide application specific configuration.
-            </remarks>
-        </member>
-        <member name="P:Prism.Unity.UnityBootstrapper.Container">
-            <summary>
-            Gets the default <see cref="T:Unity.IUnityContainer"/> for the application.
-            </summary>
-            <value>The default <see cref="T:Unity.IUnityContainer"/> instance.</value>
-        </member>
-        <member name="M:Prism.Unity.UnityBootstrapper.Run(System.Boolean)">
-            <summary>
-            Run the bootstrapper process.
-            </summary>
-            <param name="runWithDefaultConfiguration">If <see langword="true"/>, registers default Prism Library services in the container. This is the default behavior.</param>
-        </member>
-        <member name="M:Prism.Unity.UnityBootstrapper.ConfigureServiceLocator">
-            <summary>
-            Configures the LocatorProvider for the <see cref="T:CommonServiceLocator.ServiceLocator" />.
+            Base application class that uses <see cref="T:Prism.Unity.UnityContainerExtension"/> as it's container.
             </summary>
         </member>
-        <member name="M:Prism.Unity.UnityBootstrapper.RegisterFrameworkExceptionTypes">
+        <member name="M:Prism.Unity.PrismApplication.CreateContainerExtension">
             <summary>
-            Registers in the <see cref="T:Unity.IUnityContainer"/> the <see cref="T:System.Type"/> of the Exceptions
-            that are not considered root exceptions by the <see cref="T:System.ExceptionExtensions"/>.
+            Create a new <see cref="T:Prism.Unity.UnityContainerExtension"/> used by Prism.
+            </summary>
+            <returns>A new <see cref="T:Prism.Unity.UnityContainerExtension"/>.</returns>
+        </member>
+        <member name="M:Prism.Unity.PrismApplication.RegisterFrameworkExceptionTypes">
+            <summary>
+            Registers the <see cref="T:System.Type"/>s of the Exceptions that are not considered 
+            root exceptions by the <see cref="T:System.ExceptionExtensions"/>.
             </summary>
         </member>
-        <member name="M:Prism.Unity.UnityBootstrapper.ConfigureContainer">
+        <member name="T:Prism.Unity.PrismBootstrapper">
             <summary>
-            Configures the <see cref="T:Unity.IUnityContainer"/>. May be overwritten in a derived class to add specific
-            type mappings required by the application.
+            Base bootstrapper class that uses <see cref="T:Prism.Unity.UnityContainerExtension"/> as it's container.
             </summary>
         </member>
-        <member name="M:Prism.Unity.UnityBootstrapper.InitializeModules">
+        <member name="M:Prism.Unity.PrismBootstrapper.CreateContainerExtension">
             <summary>
-            Initializes the modules. May be overwritten in a derived class to use a custom Modules Catalog
+            Create a new <see cref="T:Prism.Unity.UnityContainerExtension"/> used by Prism.
             </summary>
+            <returns>A new <see cref="T:Prism.Unity.UnityContainerExtension"/>.</returns>
         </member>
-        <member name="M:Prism.Unity.UnityBootstrapper.CreateContainer">
+        <member name="M:Prism.Unity.PrismBootstrapper.RegisterFrameworkExceptionTypes">
             <summary>
-            Creates the <see cref="T:Unity.IUnityContainer"/> that will be used as the default container.
+            Registers the <see cref="T:System.Type"/>s of the Exceptions that are not considered 
+            root exceptions by the <see cref="T:System.ExceptionExtensions"/>.
             </summary>
-            <returns>A new instance of <see cref="T:Unity.IUnityContainer"/>.</returns>
-        </member>
-        <member name="M:Prism.Unity.UnityBootstrapper.RegisterTypeIfMissing(System.Type,System.Type,System.Boolean)">
-            <summary>
-            Registers a type in the container only if that type was not already registered.
-            </summary>
-            <param name="fromType">The interface type to register.</param>
-            <param name="toType">The type implementing the interface.</param>
-            <param name="registerAsSingleton">Registers the type as a singleton.</param>
-        </member>
-        <member name="T:Prism.Unity.UnityContainerHelper">
-            <summary>
-            Extensions methods to extend and facilitate the usage of <see cref="T:Unity.IUnityContainer"/>.
-            </summary>
-        </member>
-        <member name="M:Prism.Unity.UnityContainerHelper.IsTypeRegistered(Unity.IUnityContainer,System.Type)">
-            <summary>
-            Returns whether a specified type has a type mapping registered in the container.
-            </summary>
-            <param name="container">The <see cref="T:Unity.IUnityContainer"/> to check for the type mapping.</param>
-            <param name="type">The type to check if there is a type mapping for.</param>
-            <returns><see langword="true"/> if there is a type mapping registered for <paramref name="type"/>.</returns>
-            <remarks>In order to use this extension method, you first need to add the
-            <see cref="T:Unity.IUnityContainer"/> extension to the <see cref="!:UnityBootstrapperExtension"/>.
-            </remarks>        
-        </member>
-        <member name="M:Prism.Unity.UnityContainerHelper.TryResolve``1(Unity.IUnityContainer)">
-            <summary>
-            Utility method to try to resolve a service from the container avoiding an exception if the container cannot build the type.
-            </summary>
-            <param name="container">The cointainer that will be used to resolve the type.</param>
-            <typeparam name="T">The type to resolve.</typeparam>
-            <returns>The instance of <typeparamref name="T"/> built up by the container.</returns>
-        </member>
-        <member name="M:Prism.Unity.UnityContainerHelper.TryResolve(Unity.IUnityContainer,System.Type)">
-            <summary>
-            Utility method to try to resolve a service from the container avoiding an exception if the container cannot build the type.
-            </summary>
-            <param name="container">The cointainer that will be used to resolve the type.</param>
-            <param name="typeToResolve">The type to resolve.</param>
-            <returns>The instance of <paramref name="typeToResolve"/> built up by the container.</returns>
-        </member>
-        <member name="M:Prism.Unity.UnityExtensions.RegisterTypeForNavigation(Unity.IUnityContainer,System.Type,System.String)">
-            <summary>
-            Registers an object for navigation
-            </summary>
-            <param name="container"></param>
-            <param name="type">The type of object to register</param>
-            <param name="name">The unique name to register with the obect.</param>
-            <returns><see cref="T:Unity.IUnityContainer"/></returns>
-        </member>
-        <member name="M:Prism.Unity.UnityExtensions.RegisterTypeForNavigation``1(Unity.IUnityContainer,System.String)">
-            <summary>
-            Registers an object for navigation.
-            </summary>
-            <typeparam name="T">The Type of the object to register as the view</typeparam>
-            <param name="container"></param>
-            <param name="name">The unique name to register with the object.</param>
-        </member>
-        <member name="M:Prism.Unity.UnityExtensions.RegisterTypeForNavigation``2(Unity.IUnityContainer,System.String)">
-            <summary>
-            Registers an object for navigation.
-            </summary>
-            <typeparam name="TView">The Type of object to register as the view</typeparam>
-            <typeparam name="TViewModel">The ViewModel to use as the DataContext for the view</typeparam>
-            <param name="name">The unique name to register with the view</param>
-            <param name="container"></param>
         </member>
         <member name="T:Prism.Unity.Properties.Resources">
             <summary>
@@ -134,76 +52,6 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.AddingUnityBootstrapperExtensionToContainer">
-            <summary>
-              Looks up a localized string similar to Adding UnityBootstrapperExtension to container..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.BootstrapperSequenceCompleted">
-            <summary>
-              Looks up a localized string similar to Bootstrapper sequence completed..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.ConfiguringDefaultRegionBehaviors">
-            <summary>
-              Looks up a localized string similar to Configuring default region behaviors..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.ConfiguringModuleCatalog">
-            <summary>
-              Looks up a localized string similar to Configuring module catalog..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.ConfiguringRegionAdapters">
-            <summary>
-              Looks up a localized string similar to Configuring region adapters..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.ConfiguringServiceLocatorSingleton">
-            <summary>
-              Looks up a localized string similar to Configuring ServiceLocator singleton..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.ConfiguringUnityContainer">
-            <summary>
-              Looks up a localized string similar to Configuring the Unity container..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.ConfiguringViewModelLocator">
-            <summary>
-              Looks up a localized string similar to Configuring the ViewModelLocator to use Unity..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.CreatingModuleCatalog">
-            <summary>
-              Looks up a localized string similar to Creating module catalog..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.CreatingShell">
-            <summary>
-              Looks up a localized string similar to Creating the shell..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.CreatingUnityContainer">
-            <summary>
-              Looks up a localized string similar to Creating Unity container..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.InitializingModules">
-            <summary>
-              Looks up a localized string similar to Initializing modules..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.InitializingShell">
-            <summary>
-              Looks up a localized string similar to Initializing the shell..
-            </summary>
-        </member>
-        <member name="P:Prism.Unity.Properties.Resources.LoggerCreatedSuccessfully">
-            <summary>
-              Looks up a localized string similar to Logger was created successfully..
             </summary>
         </member>
         <member name="P:Prism.Unity.Properties.Resources.NotOverwrittenGetModuleEnumeratorException">
@@ -226,11 +74,6 @@
               Looks up a localized string similar to The IUnityContainer is required and cannot be null..
             </summary>
         </member>
-        <member name="P:Prism.Unity.Properties.Resources.RegisteringFrameworkExceptionTypes">
-            <summary>
-              Looks up a localized string similar to Registering Framework Exception Types..
-            </summary>
-        </member>
         <member name="P:Prism.Unity.Properties.Resources.SettingTheRegionManager">
             <summary>
               Looks up a localized string similar to Setting the RegionManager..
@@ -241,58 +84,241 @@
               Looks up a localized string similar to Type &apos;{0}&apos; was already registered by the application. Skipping....
             </summary>
         </member>
-        <member name="P:Prism.Unity.Properties.Resources.UpdatingRegions">
+        <member name="T:Prism.Unity.PrismIocExtensions">
             <summary>
-              Looks up a localized string similar to Updating Regions..
+            Extensions help get the underlying <see cref="T:Unity.IUnityContainer" />
             </summary>
         </member>
-        <member name="T:Prism.Unity.Regions.UnityRegionNavigationContentLoader">
+        <member name="M:Prism.Unity.PrismIocExtensions.GetContainer(Prism.Ioc.IContainerProvider)">
             <summary>
-            Specialization of the default RegionNavigationContentLoader that queries the corresponding <see cref="T:Unity.IUnityContainer"/>
-            to obtain the name of the view's type registered for the contract name.
+            Gets the <see cref="T:Unity.IUnityContainer" /> from the <see cref="T:Prism.Ioc.IContainerProvider" />
+            </summary>
+            <param name="containerProvider">The current <see cref="T:Prism.Ioc.IContainerProvider" /></param>
+            <returns>The underlying <see cref="T:Unity.IUnityContainer" /></returns>
+        </member>
+        <member name="M:Prism.Unity.PrismIocExtensions.GetContainer(Prism.Ioc.IContainerRegistry)">
+            <summary>
+            Gets the <see cref="T:Unity.IUnityContainer" /> from the <see cref="T:Prism.Ioc.IContainerProvider" />
+            </summary>
+            <param name="containerRegistry">The current <see cref="T:Prism.Ioc.IContainerRegistry" /></param>
+            <returns>The underlying <see cref="T:Unity.IUnityContainer" /></returns>
+        </member>
+        <member name="T:Prism.Unity.UnityContainerExtension">
+            <summary>
+            The Unity implementation of the <see cref="T:Prism.Ioc.IContainerExtension" />
             </summary>
         </member>
-        <member name="M:Prism.Unity.Regions.UnityRegionNavigationContentLoader.#ctor(CommonServiceLocator.IServiceLocator,Unity.IUnityContainer)">
+        <member name="P:Prism.Unity.UnityContainerExtension.Instance">
             <summary>
-            Initializes a new instance of the <see cref="T:Prism.Unity.Regions.UnityRegionNavigationContentLoader"/> class.
-            </summary>
-            <param name="serviceLocator"><see cref="T:CommonServiceLocator.IServiceLocator"/> used to create the instance of the view from its <see cref="T:System.Type"/>.</param>
-            <param name="container"><see cref="T:Unity.IUnityContainer"/> where the views are registered.</param>
-        </member>
-        <member name="M:Prism.Unity.Regions.UnityRegionNavigationContentLoader.GetCandidatesFromRegion(Prism.Regions.IRegion,System.String)">
-            <summary>
-            Returns the set of candidates that may satisfiy this navigation request.
-            </summary>
-            <param name="region">The region containing items that may satisfy the navigation request.</param>
-            <param name="candidateNavigationContract">The candidate navigation target.</param>
-            <returns>An enumerable of candidate objects from the <see cref="T:Prism.Regions.IRegion"/></returns>
-        </member>
-        <member name="T:Prism.Unity.UnityServiceLocatorAdapter">
-            <summary>
-            Defines a <see cref="T:Unity.IUnityContainer"/> adapter for the <see cref="T:CommonServiceLocator.IServiceLocator"/> interface to be used by the Prism Library.
+            The instance of the wrapped container
             </summary>
         </member>
-        <member name="M:Prism.Unity.UnityServiceLocatorAdapter.#ctor(Unity.IUnityContainer)">
+        <member name="M:Prism.Unity.UnityContainerExtension.#ctor">
             <summary>
-            Initializes a new instance of <see cref="T:Prism.Unity.UnityServiceLocatorAdapter"/>.
+            Constructs a default <see cref="T:Prism.Unity.UnityContainerExtension" />
             </summary>
-            <param name="unityContainer">The <see cref="T:Unity.IUnityContainer"/> that will be used
-            by the <see cref="M:Prism.Unity.UnityServiceLocatorAdapter.DoGetInstance(System.Type,System.String)"/> and <see cref="M:Prism.Unity.UnityServiceLocatorAdapter.DoGetAllInstances(System.Type)"/> methods.</param>
         </member>
-        <member name="M:Prism.Unity.UnityServiceLocatorAdapter.DoGetInstance(System.Type,System.String)">
+        <member name="M:Prism.Unity.UnityContainerExtension.#ctor(Unity.IUnityContainer)">
             <summary>
-            Resolves the instance of the requested service.
+            Constructs a <see cref="T:Prism.Unity.UnityContainerExtension" /> with the specified <see cref="T:Unity.IUnityContainer" />
             </summary>
-            <param name="serviceType">Type of instance requested.</param>
-            <param name="key">Name of registered service you want. May be null.</param>
-            <returns>The requested service instance.</returns>
+            <param name="container"></param>
         </member>
-        <member name="M:Prism.Unity.UnityServiceLocatorAdapter.DoGetAllInstances(System.Type)">
+        <member name="P:Prism.Unity.UnityContainerExtension.CurrentScope">
             <summary>
-            Resolves all the instances of the requested service.
+            Gets the current <see cref="T:Prism.Ioc.IScopedProvider"/>
             </summary>
-            <param name="serviceType">Type of service requested.</param>
-            <returns>Sequence of service instance objects.</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.FinalizeExtension">
+            <summary>
+            Used to perform any final steps for configuring the extension that may be required by the container.
+            </summary>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.RegisterInstance(System.Type,System.Object)">
+            <summary>
+            Registers an instance of a given <see cref="T:System.Type"/>
+            </summary>
+            <param name="type">The service <see cref="T:System.Type"/> that is being registered</param>
+            <param name="instance">The instance of the service or <see cref="T:System.Type" /></param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.RegisterInstance(System.Type,System.Object,System.String)">
+            <summary>
+            Registers an instance of a given <see cref="T:System.Type"/> with the specified name or key
+            </summary>
+            <param name="type">The service <see cref="T:System.Type"/> that is being registered</param>
+            <param name="instance">The instance of the service or <see cref="T:System.Type" /></param>
+            <param name="name">The name or key to register the service</param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.RegisterSingleton(System.Type,System.Type)">
+            <summary>
+            Registers a Singleton with the given service and mapping to the specified implementation <see cref="T:System.Type" />.
+            </summary>
+            <param name="from">The service <see cref="T:System.Type" /></param>
+            <param name="to">The implementation <see cref="T:System.Type" /></param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.RegisterSingleton(System.Type,System.Type,System.String)">
+            <summary>
+            Registers a Singleton with the given service and mapping to the specified implementation <see cref="T:System.Type" />.
+            </summary>
+            <param name="from">The service <see cref="T:System.Type" /></param>
+            <param name="to">The implementation <see cref="T:System.Type" /></param>
+            <param name="name">The name or key to register the service</param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.RegisterSingleton(System.Type,System.Func{System.Object})">
+            <summary>
+            Registers a Singleton with the given service <see cref="T:System.Type" /> factory delegate method.
+            </summary>
+            <param name="type">The service <see cref="T:System.Type" /></param>
+            <param name="factoryMethod">The delegate method.</param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.RegisterSingleton(System.Type,System.Func{Prism.Ioc.IContainerProvider,System.Object})">
+            <summary>
+            Registers a Singleton with the given service <see cref="T:System.Type" /> factory delegate method.
+            </summary>
+            <param name="type">The service <see cref="T:System.Type" /></param>
+            <param name="factoryMethod">The delegate method using <see cref="T:Prism.Ioc.IContainerProvider"/>.</param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.RegisterManySingleton(System.Type,System.Type[])">
+            <summary>
+            Registers a Singleton Service which implements service interfaces
+            </summary>
+            <param name="type">The implementation <see cref="T:System.Type" />.</param>
+            <param name="serviceTypes">The service <see cref="T:System.Type"/>'s.</param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+            <remarks>Registers all interfaces if none are specified.</remarks>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.Register(System.Type,System.Type)">
+            <summary>
+            Registers a Transient with the given service and mapping to the specified implementation <see cref="T:System.Type" />.
+            </summary>
+            <param name="from">The service <see cref="T:System.Type" /></param>
+            <param name="to">The implementation <see cref="T:System.Type" /></param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.Register(System.Type,System.Type,System.String)">
+            <summary>
+            Registers a Transient with the given service and mapping to the specified implementation <see cref="T:System.Type" />.
+            </summary>
+            <param name="from">The service <see cref="T:System.Type" /></param>
+            <param name="to">The implementation <see cref="T:System.Type" /></param>
+            <param name="name">The name or key to register the service</param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.Register(System.Type,System.Func{System.Object})">
+            <summary>
+            Registers a Transient Service using a delegate method
+            </summary>
+            <param name="type">The service <see cref="T:System.Type" /></param>
+            <param name="factoryMethod">The delegate method.</param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.Register(System.Type,System.Func{Prism.Ioc.IContainerProvider,System.Object})">
+            <summary>
+            Registers a Transient Service using a delegate method
+            </summary>
+            <param name="type">The service <see cref="T:System.Type" /></param>
+            <param name="factoryMethod">The delegate method using <see cref="T:Prism.Ioc.IContainerProvider"/>.</param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.RegisterMany(System.Type,System.Type[])">
+            <summary>
+            Registers a Transient Service which implements service interfaces
+            </summary>
+            <param name="type">The implementing <see cref="T:System.Type" />.</param>
+            <param name="serviceTypes">The service <see cref="T:System.Type"/>'s.</param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+            <remarks>Registers all interfaces if none are specified.</remarks>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.RegisterScoped(System.Type,System.Type)">
+            <summary>
+            Registers a scoped service
+            </summary>
+            <param name="from">The service <see cref="T:System.Type" /></param>
+            <param name="to">The implementation <see cref="T:System.Type" /></param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.RegisterScoped(System.Type,System.Func{System.Object})">
+            <summary>
+            Registers a scoped service using a delegate method.
+            </summary>
+            <param name="type">The service <see cref="T:System.Type" /></param>
+            <param name="factoryMethod">The delegate method.</param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.RegisterScoped(System.Type,System.Func{Prism.Ioc.IContainerProvider,System.Object})">
+            <summary>
+            Registers a scoped service using a delegate method.
+            </summary>
+            <param name="type">The service <see cref="T:System.Type"/>.</param>
+            <param name="factoryMethod">The delegate method.</param>
+            <returns>The <see cref="T:Prism.Ioc.IContainerRegistry" /> instance</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.Resolve(System.Type)">
+            <summary>
+            Resolves a given <see cref="T:System.Type"/>
+            </summary>
+            <param name="type">The service <see cref="T:System.Type"/></param>
+            <returns>The resolved Service <see cref="T:System.Type"/></returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.Resolve(System.Type,System.String)">
+            <summary>
+            Resolves a given <see cref="T:System.Type"/>
+            </summary>
+            <param name="type">The service <see cref="T:System.Type"/></param>
+            <param name="name">The service name/key used when registering the <see cref="T:System.Type"/></param>
+            <returns>The resolved Service <see cref="T:System.Type"/></returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.Resolve(System.Type,System.ValueTuple{System.Type,System.Object}[])">
+            <summary>
+            Resolves a given <see cref="T:System.Type"/>
+            </summary>
+            <param name="type">The service <see cref="T:System.Type"/></param>
+            <param name="parameters">Typed parameters to use when resolving the Service</param>
+            <returns>The resolved Service <see cref="T:System.Type"/></returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.Resolve(System.Type,System.String,System.ValueTuple{System.Type,System.Object}[])">
+            <summary>
+            Resolves a given <see cref="T:System.Type"/>
+            </summary>
+            <param name="type">The service <see cref="T:System.Type"/></param>
+            <param name="name">The service name/key used when registering the <see cref="T:System.Type"/></param>
+            <param name="parameters">Typed parameters to use when resolving the Service</param>
+            <returns>The resolved Service <see cref="T:System.Type"/></returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.IsRegistered(System.Type)">
+            <summary>
+            Determines if a given service is registered
+            </summary>
+            <param name="type">The service <see cref="T:System.Type" /></param>
+            <returns><c>true</c> if the service is registered.</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.IsRegistered(System.Type,System.String)">
+            <summary>
+            Determines if a given service is registered with the specified name
+            </summary>
+            <param name="type">The service <see cref="T:System.Type" /></param>
+            <param name="name">The service name or key used</param>
+            <returns><c>true</c> if the service is registered.</returns>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.CreateScope">
+            <summary>
+            Creates a new Scope
+            </summary>
+        </member>
+        <member name="M:Prism.Unity.UnityContainerExtension.CreateScopeInternal">
+            <summary>
+            Creates a new Scope and provides the updated ServiceProvider
+            </summary>
+            <returns>A child <see cref="T:Unity.IUnityContainer" />.</returns>
+            <remarks>
+            This should be called by custom implementations that Implement IServiceScopeFactory
+            </remarks>
         </member>
     </members>
 </doc>

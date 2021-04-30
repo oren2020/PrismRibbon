@@ -23,7 +23,7 @@ namespace PrismRibbon
 
         protected override Window CreateShell()
         {
-            return ServiceLocator.Current.GetInstance<Shell>();
+            return Container.Resolve<Shell>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

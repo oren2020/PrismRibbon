@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\froon\source\repos\PrismRibbon_Projects\PrismRibbon_2\ModuleA\obj\Debug\
+C:\Users\froon\Documents\vsproject - Copy\PrismRibbon_project\PrismRibbon\ModuleA\obj\Debug\
 ModuleA
 none
 false
@@ -12,8 +12,8 @@ DEBUG;TRACE
 
 61189686342
 
-13-2022579560
-1321918270739
+131693315896
+291148128972
 RibbonTabs\ViewATab.xaml;RibbonTabs\ViewATabExtra.xaml;RibbonTabs\ViewBTab.xaml;Views\ViewA.xaml;Views\ViewB.xaml;Views\ViewC.xaml;
 
 False
